@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Form With Validation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <fieldset>
+            <legend>Browser Form With Validation</legend>
+          <div>
+            <label for="e-mail">Email: </label>
+            <input type="email" id="e-mail" name="e-mail" required pattern="(\w+)(@)(\w+)(\.)(\w{2,})"/>
+            <span id="em-error"></span>
+          </div>
+          <div>
+            <label for="country">Country: </label>
+            <input type="text" id="country" name="country" required pattern="(\w{2,})|(\w{2,}\s\w{2,})+"/>
+            <span id="cn-error"></span>
+          </div>
+          <div>
+            <label for="zip-code">Zip Code: </label>
+            <input type="text" id="zip-code" name="zip-code" required minlength="4" pattern="([A-Z]{2,})(\d{4,})|(\d{4,})"/>
+            <span id="zc-error"></span>
+          </div>
+          <div>
+            <label for="pass-code">Password: </label>
+            <input type="text" id="pass-code" name="pass-code" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+"/>
+            <span id="pc-error"></span>
+          </div>
+          <div>
+            <label for="code-confirm">Password Confirmation: </label>
+            <input type="text" id="code-confirm" name="code-confirm" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+"/>
+            <span id="cc-error"></span>
+          </div>
+          <div>
+            <button>OKAY</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

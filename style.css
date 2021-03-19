@@ -1,0 +1,22 @@
+body {
+    background-color: silver;
+}
+
+.container {
+    width: 38vw;
+    align-items: center;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+fieldset {
+    background-color: silver;
+}
+
+fieldset > div {
+    margin: 11px;
+}
+
+fieldset > div > input {
+    width: 100%;
+}
