@@ -9,32 +9,34 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form novalidate>
         <fieldset>
             <legend>Browser Form With Validation</legend>
           <div>
             <label for="e-mail">Email: </label>
-            <input type="email" id="e-mail" name="e-mail" required pattern="(\w+)(@)(\w+)(\.)(\w{2,})"/>
+            <!-- <input type="email" id="e-mail" name="e-mail" minlength="6" required pattern="(\w+)(@)(\w+)(\.)(\w{2,})" placeholder="eg:(example@foo.com), length of 6 or more"/> -->
+            <input type="email" id="e-mail" name="e-mail" minlength="6" required pattern="\w+(@)\w{2,}\.{1}\w{2,}" placeholder="eg:(example@foo.com), length of 6 or more"/>
             <span id="em-error"></span>
           </div>
           <div>
             <label for="country">Country: </label>
-            <input type="text" id="country" name="country" required pattern="(\w{2,})|(\w{2,}\s\w{2,})+"/>
+            <!-- <input type="text" id="country" name="country" required pattern="(\w{2,})|(\w{2,}\s\w{2,})+" placeholder="eg: (country or example Country)"/> -->
+            <input type="text" id="country" name="country" required pattern="[A-Za-z]{2,}|([A-Za-z]{2,}\s[A-Za-z]{2,})+" placeholder="eg: (country or example Country)"/>
             <span id="cn-error"></span>
           </div>
           <div>
             <label for="zip-code">Zip Code: </label>
-            <input type="text" id="zip-code" name="zip-code" required minlength="4" pattern="([A-Z]{2,})(\d{4,})|(\d{4,})"/>
+            <input type="text" id="zip-code" name="zip-code" required minlength="4" pattern="([A-Z]{2,})(\d{4,})|(\d{4,})" placeholder="eg:US12210 or 1212, length of 4 or more"/>
             <span id="zc-error"></span>
           </div>
           <div>
             <label for="pass-code">Password: </label>
-            <input type="text" id="pass-code" name="pass-code" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+"/>
+            <input type="text" id="pass-code" name="pass-code" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+" placeholder="eg:AaBb00 at least length of 6"/>
             <span id="pc-error"></span>
           </div>
           <div>
             <label for="code-confirm">Password Confirmation: </label>
-            <input type="text" id="code-confirm" name="code-confirm" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+"/>
+            <input type="text" id="code-confirm" name="code-confirm" required minlength="6" pattern="^((.*[A-Z])(.*[a-z])(.*\d{1,}))+" placeholder="eg:AaBb00 at least length of 6"/>
             <span id="cc-error"></span>
           </div>
           <div>
@@ -43,5 +45,6 @@
         </fieldset>
       </form>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

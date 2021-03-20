@@ -20,3 +20,30 @@ fieldset > div {
 fieldset > div > input {
     width: 100%;
 }
+
+fieldset > div > button {
+    width: 65%;
+    margin-left: 18%;
+}
+
+input:invalid {
+    border: 1.1px dotted maroon;
+}
+
+input:focus {
+    outline: thin;
+    border: 1.1px solid green;
+}
+
+input:valid {
+    outline: thin;
+    border: 1.1px solid silver;
+    background: linear-gradient(to left, green, yellowgreen);
+}
+
+.error-active {
+    background: silver;
+    color: maroon;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
